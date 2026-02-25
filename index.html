@@ -1,0 +1,1227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NagarSeva KIOSK — Unified Smart Civic Services</title>
+    <meta
+      name="description"
+      content="NagarSeva KIOSK: Intelligent multilingual self-service platform for civic utility services — electricity, gas, water, sanitation and municipal services."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════════
+     SCREEN 1: WELCOME / LANGUAGE SELECTOR
+═══════════════════════════════════════════ -->
+    <div id="screen-welcome" class="screen active">
+      <!-- Offline Banner -->
+      <div id="offline-banner" class="offline-banner hidden">
+        <span class="offline-icon">⚠</span>
+        <span
+          >Offline Mode — Limited services available. Cached data shown.</span
+        >
+      </div>
+
+      <!-- Header -->
+      <header class="kiosk-header">
+        <div class="header-logo">
+          <div class="logo-emblem">🏛</div>
+          <div class="logo-text">
+            <span class="logo-main">NagarSeva</span>
+            <span class="logo-sub">KIOSK</span>
+          </div>
+        </div>
+        <div class="header-meta">
+          <div class="header-time" id="header-clock">16:38</div>
+          <div class="header-date" id="header-date">Wed, 25 Feb 2026</div>
+          <div class="connectivity-badge online" id="connectivity-badge">
+            <span class="dot"></span> Online
+          </div>
+        </div>
+      </header>
+
+      <!-- Welcome Content -->
+      <main class="welcome-main">
+        <div class="welcome-hero">
+          <h1 class="welcome-title">स्वागत है &nbsp;|&nbsp; Welcome</h1>
+          <p class="welcome-subtitle">
+            Choose your preferred language to continue &nbsp;/&nbsp; जारी रखने
+            के लिए अपनी भाषा चुनें
+          </p>
+        </div>
+
+        <!-- Language Grid -->
+        <div class="language-grid" id="language-grid">
+          <button
+            class="lang-btn active"
+            id="lang-en"
+            onclick="setLanguage('en', 'English')"
+            aria-label="English"
+          >
+            <span class="lang-native">English</span>
+            <span class="lang-roman">English</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-hi"
+            onclick="setLanguage('hi', 'हिंदी')"
+            aria-label="Hindi"
+          >
+            <span class="lang-native">हिंदी</span>
+            <span class="lang-roman">Hindi</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-gu"
+            onclick="setLanguage('gu', 'ગુજરાતી')"
+            aria-label="Gujarati"
+          >
+            <span class="lang-native">ગુજરાતી</span>
+            <span class="lang-roman">Gujarati</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-mr"
+            onclick="setLanguage('mr', 'मराठी')"
+            aria-label="Marathi"
+          >
+            <span class="lang-native">मराठी</span>
+            <span class="lang-roman">Marathi</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-ta"
+            onclick="setLanguage('ta', 'தமிழ்')"
+            aria-label="Tamil"
+          >
+            <span class="lang-native">தமிழ்</span>
+            <span class="lang-roman">Tamil</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-te"
+            onclick="setLanguage('te', 'తెలుగు')"
+            aria-label="Telugu"
+          >
+            <span class="lang-native">తెలుగు</span>
+            <span class="lang-roman">Telugu</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-kn"
+            onclick="setLanguage('kn', 'ಕನ್ನಡ')"
+            aria-label="Kannada"
+          >
+            <span class="lang-native">ಕನ್ನಡ</span>
+            <span class="lang-roman">Kannada</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-ml"
+            onclick="setLanguage('ml', 'മലയാളം')"
+            aria-label="Malayalam"
+          >
+            <span class="lang-native">മലയാളം</span>
+            <span class="lang-roman">Malayalam</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-bn"
+            onclick="setLanguage('bn', 'বাংলা')"
+            aria-label="Bengali"
+          >
+            <span class="lang-native">বাংলা</span>
+            <span class="lang-roman">Bengali</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-pa"
+            onclick="setLanguage('pa', 'ਪੰਜਾਬੀ')"
+            aria-label="Punjabi"
+          >
+            <span class="lang-native">ਪੰਜਾਬੀ</span>
+            <span class="lang-roman">Punjabi</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-or"
+            onclick="setLanguage('or', 'ଓଡ଼ିଆ')"
+            aria-label="Odia"
+          >
+            <span class="lang-native">ଓଡ଼ିଆ</span>
+            <span class="lang-roman">Odia</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-as"
+            onclick="setLanguage('as', 'অসমীয়া')"
+            aria-label="Assamese"
+          >
+            <span class="lang-native">অসমীয়া</span>
+            <span class="lang-roman">Assamese</span>
+          </button>
+        </div>
+
+        <!-- CTA -->
+        <button
+          class="btn-primary btn-xl"
+          id="btn-proceed"
+          onclick="goToScreen('screen-auth')"
+        >
+          <span id="proceed-label">Proceed →</span>
+        </button>
+
+        <!-- Accessibility Bar -->
+        <div class="accessibility-bar">
+          <button
+            class="acc-btn"
+            onclick="toggleSeniorMode()"
+            id="senior-toggle"
+            aria-label="Senior Mode"
+          >
+            👴 Senior Mode
+          </button>
+          <button
+            class="acc-btn"
+            onclick="toggleVoice()"
+            id="voice-toggle"
+            aria-label="Voice Navigation"
+          >
+            🎙 Voice
+          </button>
+          <button class="acc-btn" onclick="showHelp()" aria-label="Help">
+            ❓ Help
+          </button>
+        </div>
+      </main>
+
+      <!-- Scrolling Marquee -->
+      <div class="marquee-bar">
+        <div class="marquee-track">
+          📢 New: Gas cylinder booking now available on this kiosk
+          &nbsp;&nbsp;|&nbsp;&nbsp; ⚡ Electricity bill payment — Instant
+          receipt via SMS &nbsp;&nbsp;|&nbsp;&nbsp; 🏛 Property tax deadline:
+          March 31, 2026 — Pay now to avoid penalty &nbsp;&nbsp;|&nbsp;&nbsp; 💧
+          Water connection applications: Processing time reduced to 7 days
+          &nbsp;&nbsp;|&nbsp;&nbsp; 🚦 Traffic challans — Pay online, get
+          instant receipt &nbsp;&nbsp;|&nbsp;&nbsp; 📱 Now accepting UPI, Card
+          &amp; Net Banking payments &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     SCREEN 2: CONSUMER ID + OTP AUTH
+═══════════════════════════════════════════ -->
+    <div id="screen-auth" class="screen">
+      <div class="sub-header">
+        <button class="btn-back" onclick="goToScreen('screen-welcome')">
+          ← Back
+        </button>
+        <div class="breadcrumb">Home › Login</div>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
+      </div>
+
+      <div class="auth-container">
+        <div class="auth-card" id="auth-step-1">
+          <div class="auth-icon">🔐</div>
+          <h2 class="auth-title">Verify Your Identity</h2>
+          <p class="auth-subtitle">
+            Enter your Consumer ID and registered mobile number
+          </p>
+
+          <div class="form-group">
+            <label class="form-label" for="consumer-id"
+              >Consumer ID / Aadhaar Number</label
+            >
+            <input
+              class="form-input"
+              type="text"
+              id="consumer-id"
+              placeholder="e.g. ELEC-2024-00123"
+              maxlength="20"
+              aria-label="Consumer ID"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="mobile-number"
+              >Registered Mobile Number</label
+            >
+            <div class="input-prefix-wrap">
+              <span class="input-prefix">+91</span>
+              <input
+                class="form-input prefix-input"
+                type="tel"
+                id="mobile-number"
+                placeholder="98765 43210"
+                maxlength="10"
+                aria-label="Mobile Number"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <div class="auth-notice">
+            <span>🔒</span>
+            <span
+              >An OTP will be sent to your registered mobile number. Max 3
+              attempts allowed.</span
+            >
+          </div>
+
+          <button class="btn-primary btn-full" onclick="sendOTP()">
+            Send OTP via SMS →
+          </button>
+        </div>
+
+        <!-- OTP Step (hidden initially) -->
+        <div class="auth-card hidden" id="auth-step-2">
+          <div class="auth-icon">📱</div>
+          <h2 class="auth-title">Enter OTP</h2>
+          <p class="auth-subtitle">
+            OTP sent to +91 <span id="otp-mobile-display">XXXXXXXXXX</span>
+          </p>
+
+          <div class="otp-grid">
+            <input
+              class="otp-input"
+              type="text"
+              maxlength="1"
+              id="otp-0"
+              oninput="otpInput(this, 0)"
+              aria-label="OTP digit 1"
+            />
+            <input
+              class="otp-input"
+              type="text"
+              maxlength="1"
+              id="otp-1"
+              oninput="otpInput(this, 1)"
+              aria-label="OTP digit 2"
+            />
+            <input
+              class="otp-input"
+              type="text"
+              maxlength="1"
+              id="otp-2"
+              oninput="otpInput(this, 2)"
+              aria-label="OTP digit 3"
+            />
+            <input
+              class="otp-input"
+              type="text"
+              maxlength="1"
+              id="otp-3"
+              oninput="otpInput(this, 3)"
+              aria-label="OTP digit 4"
+            />
+            <input
+              class="otp-input"
+              type="text"
+              maxlength="1"
+              id="otp-4"
+              oninput="otpInput(this, 4)"
+              aria-label="OTP digit 5"
+            />
+            <input
+              class="otp-input"
+              type="text"
+              maxlength="1"
+              id="otp-5"
+              oninput="otpInput(this, 5)"
+              aria-label="OTP digit 6"
+            />
+          </div>
+
+          <div class="otp-attempts">
+            <span id="otp-attempts-text">3 attempts remaining</span>
+            <button class="btn-link" onclick="resendOTP()" id="resend-btn">
+              Resend OTP
+            </button>
+          </div>
+          <div class="otp-timer" id="otp-timer">
+            Resend in: <strong id="otp-countdown">60</strong>s
+          </div>
+
+          <button class="btn-primary btn-full" onclick="verifyOTP()">
+            Verify OTP →
+          </button>
+          <button class="btn-ghost btn-full" onclick="backToStep1()">
+            ← Change Number
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     SCREEN 3: SERVICE CATEGORY GRID
+═══════════════════════════════════════════ -->
+    <div id="screen-services" class="screen">
+      <div class="sub-header">
+        <button class="btn-back" onclick="goToScreen('screen-welcome')">
+          ← Back
+        </button>
+        <div class="breadcrumb">Home › Services</div>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
+      </div>
+
+      <!-- User Greeting -->
+      <div class="user-greeting">
+        <div class="user-avatar">👤</div>
+        <div class="user-info">
+          <div class="user-name">Welcome, Ramesh Kumar</div>
+          <div class="user-id">
+            Consumer ID: ELEC-2024-00123 &nbsp;|&nbsp; Authenticated ✅
+          </div>
+        </div>
+        <div class="session-timer-wrap">
+          <div class="session-label">Session expires in</div>
+          <div class="session-timer" id="session-countdown">04:47</div>
+        </div>
+      </div>
+
+      <div class="services-section">
+        <h2 class="section-title">Select a Service</h2>
+        <div class="service-grid" id="service-grid">
+          <button
+            class="service-card"
+            onclick="goToScreen('screen-electricity')"
+            id="card-electricity"
+            aria-label="Electricity Services"
+          >
+            <div class="service-icon elec">⚡</div>
+            <div class="service-name">Electricity</div>
+            <div class="service-desc">
+              Pay bill, report outage, new connection
+            </div>
+            <div class="service-badge pending">₹1,240 Due</div>
+          </button>
+
+          <button
+            class="service-card"
+            onclick="goToScreen('screen-gas')"
+            id="card-gas"
+            aria-label="Gas Services"
+          >
+            <div class="service-icon gas">🔥</div>
+            <div class="service-name">Gas</div>
+            <div class="service-desc">
+              PNG/LPG bill, cylinder booking, safety
+            </div>
+            <div class="service-badge ok">Paid ✓</div>
+          </button>
+
+          <button
+            class="service-card"
+            onclick="goToScreen('screen-water')"
+            id="card-water"
+            aria-label="Water Services"
+          >
+            <div class="service-icon water">💧</div>
+            <div class="service-name">Water</div>
+            <div class="service-desc">
+              Bill payment, connection, leakage report
+            </div>
+            <div class="service-badge overdue">₹580 Overdue</div>
+          </button>
+
+          <button
+            class="service-card"
+            onclick="goToScreen('screen-property')"
+            id="card-property"
+            aria-label="Property Tax"
+          >
+            <div class="service-icon prop">🏠</div>
+            <div class="service-name">Property Tax</div>
+            <div class="service-desc">View, pay, download certificate</div>
+            <div class="service-badge pending">₹8,400 Due</div>
+          </button>
+
+          <button
+            class="service-card"
+            onclick="goToScreen('screen-grievance')"
+            id="card-grievance"
+            aria-label="Grievance Portal"
+          >
+            <div class="service-icon griev">📋</div>
+            <div class="service-name">Grievance</div>
+            <div class="service-desc">
+              Submit complaint, track ticket status
+            </div>
+            <div class="service-badge neutral">Track Ticket</div>
+          </button>
+
+          <button
+            class="service-card"
+            onclick="goToScreen('screen-certificates')"
+            id="card-certs"
+            aria-label="Certificates"
+          >
+            <div class="service-icon cert">📜</div>
+            <div class="service-name">Certificates</div>
+            <div class="service-desc">Birth, death, domicile certificates</div>
+            <div class="service-badge neutral">Apply Online</div>
+          </button>
+
+          <button
+            class="service-card"
+            id="card-traffic"
+            onclick="goToScreen('screen-traffic')"
+            aria-label="Traffic Challans"
+          >
+            <div class="service-icon traffic">🚦</div>
+            <div class="service-name">Traffic Challans</div>
+            <div class="service-desc">View &amp; pay pending fines</div>
+            <div class="service-badge overdue">1 Pending</div>
+          </button>
+
+          <button
+            class="service-card"
+            id="card-waste"
+            aria-label="Waste Management"
+          >
+            <div class="service-icon waste">♻️</div>
+            <div class="service-name">Waste Mgmt</div>
+            <div class="service-desc">Report issue, bulk pickup, schedule</div>
+            <div class="service-badge neutral">Report</div>
+          </button>
+
+          <button
+            class="service-card"
+            id="card-road"
+            aria-label="Road and Infrastructure"
+          >
+            <div class="service-icon road">🛣</div>
+            <div class="service-name">Roads &amp; Infra</div>
+            <div class="service-desc">
+              Report potholes, streetlights, damage
+            </div>
+            <div class="service-badge neutral">Report</div>
+          </button>
+
+          <button
+            class="service-card"
+            id="card-license"
+            aria-label="Licenses and Permits"
+          >
+            <div class="service-icon lic">📁</div>
+            <div class="service-name">Licenses</div>
+            <div class="service-desc">Trade license, building plan, NOC</div>
+            <div class="service-badge neutral">Apply</div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     SCREEN 4: ELECTRICITY DASHBOARD
+═══════════════════════════════════════════ -->
+    <div id="screen-electricity" class="screen">
+      <div class="sub-header">
+        <button class="btn-back" onclick="goToScreen('screen-services')">
+          ← Back
+        </button>
+        <div class="breadcrumb">Home › Services › Electricity</div>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
+      </div>
+
+      <div class="dept-header elec-gradient">
+        <div class="dept-icon">⚡</div>
+        <div>
+          <div class="dept-title">Electricity Department</div>
+          <div class="dept-sub">Consumer: ELEC-2024-00123 | Meter: M-78234</div>
+        </div>
+      </div>
+
+      <!-- Bill Summary Card -->
+      <div class="bill-summary-card">
+        <div class="bill-info">
+          <div class="bill-label">Current Bill — Feb 2026</div>
+          <div class="bill-amount">₹1,240.00</div>
+          <div class="bill-due">Due Date: <strong>March 10, 2026</strong></div>
+          <div class="bill-status overdue-text">⚠ Payment Pending</div>
+        </div>
+        <div class="bill-units">
+          <div class="units-value">342</div>
+          <div class="units-label">Units (kWh)</div>
+          <div class="units-compare">↑ 18 units vs last month</div>
+        </div>
+      </div>
+
+      <!-- Consumption Chart (pure CSS bar chart) -->
+      <div class="chart-section">
+        <h3 class="chart-title">6-Month Consumption (kWh)</h3>
+        <div class="bar-chart">
+          <div class="bar-group">
+            <div class="bar" style="height: 60%">
+              <span class="bar-val">295</span>
+            </div>
+            <div class="bar-label">Sep</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height: 70%">
+              <span class="bar-val">318</span>
+            </div>
+            <div class="bar-label">Oct</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height: 55%">
+              <span class="bar-val">277</span>
+            </div>
+            <div class="bar-label">Nov</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height: 75%">
+              <span class="bar-val">337</span>
+            </div>
+            <div class="bar-label">Dec</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height: 72%">
+              <span class="bar-val">324</span>
+            </div>
+            <div class="bar-label">Jan</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar accent" style="height: 76%">
+              <span class="bar-val">342</span>
+            </div>
+            <div class="bar-label">Feb</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button
+          class="btn-primary btn-action"
+          onclick="goToScreen('screen-payment')"
+          id="pay-electricity-btn"
+        >
+          💳 Pay Bill ₹1,240
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showServiceRequest('New Connection')"
+          id="new-conn-btn"
+        >
+          ➕ New Connection
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showServiceRequest('Outage Report')"
+          id="report-outage-btn"
+        >
+          🔴 Report Outage
+        </button>
+        <button class="btn-secondary btn-action" id="view-history-btn">
+          📄 Bill History
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     SCREEN 5: PAYMENT FLOW
+═══════════════════════════════════════════ -->
+    <div id="screen-payment" class="screen">
+      <div class="sub-header">
+        <button class="btn-back" onclick="goToScreen('screen-electricity')">
+          ← Back
+        </button>
+        <div class="breadcrumb">Home › Electricity › Payment</div>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
+      </div>
+
+      <!-- Payment Steps -->
+      <div class="payment-progress">
+        <div class="progress-step active" id="pstep-1">1. Select Method</div>
+        <div class="progress-divider"></div>
+        <div class="progress-step" id="pstep-2">2. Confirm</div>
+        <div class="progress-divider"></div>
+        <div class="progress-step" id="pstep-3">3. Done</div>
+      </div>
+
+      <!-- Step 1: Method Selection -->
+      <div id="payment-step-1">
+        <div class="payment-summary-bar">
+          <span>Electricity Bill — Feb 2026</span>
+          <span class="pay-amount">₹1,240.00</span>
+        </div>
+
+        <h2 class="section-title center">Choose Payment Method</h2>
+
+        <div class="payment-methods">
+          <button
+            class="payment-method-card active"
+            onclick="selectPayment('upi')"
+            id="pay-upi"
+          >
+            <div class="pm-icon">📱</div>
+            <div class="pm-name">UPI</div>
+            <div class="pm-desc">Scan QR with any UPI app</div>
+          </button>
+          <button
+            class="payment-method-card"
+            onclick="selectPayment('card')"
+            id="pay-card"
+          >
+            <div class="pm-icon">💳</div>
+            <div class="pm-name">Debit/Credit Card</div>
+            <div class="pm-desc">Visa, Mastercard, RuPay</div>
+          </button>
+          <button
+            class="payment-method-card"
+            onclick="selectPayment('netbanking')"
+            id="pay-netbanking"
+          >
+            <div class="pm-icon">🏦</div>
+            <div class="pm-name">Net Banking</div>
+            <div class="pm-desc">All major banks supported</div>
+          </button>
+        </div>
+
+        <!-- UPI QR Section -->
+        <div class="upi-section" id="upi-section">
+          <div class="qr-container">
+            <div class="qr-placeholder">
+              <div class="qr-mock">
+                <div class="qr-grid">
+                  <!-- Simple QR-like visual pattern -->
+                  <div class="qr-row">▉▉▉ &nbsp; ▉ &nbsp; ▉▉▉</div>
+                  <div class="qr-row">
+                    ▉ &nbsp; ▉ &nbsp;▉ &nbsp;&nbsp;▉ &nbsp; ▉ &nbsp; ▉
+                  </div>
+                  <div class="qr-row">
+                    ▉ &nbsp; ▉ &nbsp; ▉ &nbsp; ▉ &nbsp; ▉
+                  </div>
+                  <div class="qr-row">▉▉▉ &nbsp; ▉ &nbsp; ▉▉▉</div>
+                </div>
+              </div>
+            </div>
+            <div class="upi-info">
+              <div class="upi-id">nagarseva@upi</div>
+              <div class="upi-amount">₹1,240.00</div>
+              <div class="upi-expire">
+                QR valid for: <strong id="qr-timer">04:59</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="btn-primary btn-full"
+          onclick="proceedPayment()"
+          id="btn-confirm-payment"
+        >
+          Confirm Payment →
+        </button>
+      </div>
+
+      <!-- Step 2: Processing -->
+      <div id="payment-step-2" class="hidden">
+        <div class="processing-container">
+          <div class="spinner"></div>
+          <div class="processing-text">Processing your payment…</div>
+          <div class="processing-sub">Please do not press Back or refresh</div>
+        </div>
+      </div>
+
+      <!-- Step 3: Success -->
+      <div id="payment-step-3" class="hidden">
+        <div class="payment-success">
+          <div class="success-icon">✅</div>
+          <h2 class="success-title">Payment Successful!</h2>
+          <div class="receipt-card">
+            <div class="receipt-row">
+              <span>Transaction ID</span><strong>TXN2026022578312</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Amount Paid</span><strong>₹1,240.00</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Service</span><strong>Electricity — Feb 2026</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Consumer ID</span><strong>ELEC-2024-00123</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Date &amp; Time</span><strong>25 Feb 2026, 16:39</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Payment Mode</span><strong>UPI</strong>
+            </div>
+            <div class="receipt-row success-row">
+              <span>Status</span><strong>✅ SUCCESS</strong>
+            </div>
+          </div>
+          <div class="receipt-note">📱 SMS receipt sent to +91 98765·43210</div>
+          <div class="receipt-actions">
+            <button class="btn-primary" onclick="printReceipt()">
+              🖨 Print Receipt
+            </button>
+            <button class="btn-ghost" onclick="goToScreen('screen-services')">
+              ← Back to Services
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     SCREEN 6: GAS SERVICES
+═══════════════════════════════════════════ -->
+    <div id="screen-gas" class="screen">
+      <div class="sub-header">
+        <button class="btn-back" onclick="goToScreen('screen-services')">
+          ← Back
+        </button>
+        <div class="breadcrumb">Home › Services › Gas</div>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
+      </div>
+      <div class="dept-header gas-gradient">
+        <div class="dept-icon">🔥</div>
+        <div>
+          <div class="dept-title">Gas Department</div>
+          <div class="dept-sub">Consumer: GAS-2024-00789</div>
+        </div>
+      </div>
+      <div class="bill-summary-card">
+        <div class="bill-info">
+          <div class="bill-label">Last Bill — Jan 2026</div>
+          <div class="bill-amount" style="color: var(--success)">
+            ₹948.00 PAID
+          </div>
+          <div class="bill-due">Paid On: <strong>Jan 18, 2026</strong></div>
+          <div class="bill-status" style="color: var(--success)">
+            ✅ All Clear
+          </div>
+        </div>
+        <div class="bill-units">
+          <div class="units-value">34</div>
+          <div class="units-label">SCM Used</div>
+          <div class="units-compare">↓ 3 SCM vs last month</div>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button
+          class="btn-secondary btn-action"
+          onclick="showToast('Cylinder booked! Delivery: 27 Feb')"
+        >
+          🛒 Book Cylinder
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showToast('Emergency team alerted!')"
+        >
+          🚨 Gas Leakage Alert
+        </button>
+        <button class="btn-secondary btn-action">📅 Safety Inspection</button>
+        <button class="btn-secondary btn-action">📈 Monthly Trends</button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     SCREEN 7: WATER SERVICES
+═══════════════════════════════════════════ -->
+    <div id="screen-water" class="screen">
+      <div class="sub-header">
+        <button class="btn-back" onclick="goToScreen('screen-services')">
+          ← Back
+        </button>
+        <div class="breadcrumb">Home › Services › Water</div>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
+      </div>
+      <div class="dept-header water-gradient">
+        <div class="dept-icon">💧</div>
+        <div>
+          <div class="dept-title">Water Services</div>
+          <div class="dept-sub">Consumer: WTR-2023-04521</div>
+        </div>
+      </div>
+      <div class="bill-summary-card">
+        <div class="bill-info">
+          <div class="bill-label">Current Bill — Feb 2026</div>
+          <div class="bill-amount" style="color: var(--danger)">
+            ₹580.00 OVERDUE
+          </div>
+          <div class="bill-due">
+            Due Date: <strong>Feb 15, 2026 (Past)</strong>
+          </div>
+          <div class="bill-status overdue-text">⛔ Penalty Applied: ₹58.00</div>
+        </div>
+        <div class="bill-units">
+          <div class="units-value">18.4</div>
+          <div class="units-label">Kiloliters</div>
+          <div class="units-compare">↑ 2.1 KL vs last month</div>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button
+          class="btn-primary btn-action"
+          onclick="showToast('Redirecting to payment...')"
+        >
+          💳 Pay ₹638 (incl. penalty)
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showToast('Request submitted! Ticket: WTR-00892')"
+        >
+          🚰 Report Leakage
+        </button>
+        <button class="btn-secondary btn-action">🚛 Book Tanker Water</button>
+        <button class="btn-secondary btn-action">
+          🧪 Water Quality Report
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     SCREEN 8: PROPERTY TAX
+═══════════════════════════════════════════ -->
+    <div id="screen-property" class="screen">
+      <div class="sub-header">
+        <button class="btn-back" onclick="goToScreen('screen-services')">
+          ← Back
+        </button>
+        <div class="breadcrumb">Home › Services › Property Tax</div>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
+      </div>
+      <div class="dept-header prop-gradient">
+        <div class="dept-icon">🏠</div>
+        <div>
+          <div class="dept-title">Property Tax</div>
+          <div class="dept-sub">Property ID: PROP-SRT-2019-11892</div>
+        </div>
+      </div>
+      <div class="bill-summary-card">
+        <div class="bill-info">
+          <div class="bill-label">FY 2025–26 Property Tax</div>
+          <div class="bill-amount">₹8,400.00</div>
+          <div class="bill-due">Deadline: <strong>March 31, 2026</strong></div>
+          <div class="bill-status" style="color: var(--warning)">
+            ⚠ Pay before March 31 to avoid 2% penalty
+          </div>
+        </div>
+        <div class="bill-units">
+          <div class="units-value">145</div>
+          <div class="units-label">sq. m. area</div>
+          <div class="units-compare">Residential — Zone B</div>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button
+          class="btn-primary btn-action"
+          onclick="showToast('Redirecting to payment...')"
+        >
+          💳 Pay ₹8,400
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showToast('Receipt downloaded!')"
+        >
+          📥 Download Receipt
+        </button>
+        <button class="btn-secondary btn-action">📋 Apply for Revision</button>
+        <button class="btn-secondary btn-action">✅ Check Exemptions</button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     SCREEN 9: GRIEVANCE PORTAL
+═══════════════════════════════════════════ -->
+    <div id="screen-grievance" class="screen">
+      <div class="sub-header">
+        <button class="btn-back" onclick="goToScreen('screen-services')">
+          ← Back
+        </button>
+        <div class="breadcrumb">Home › Services › Grievance</div>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
+      </div>
+      <div class="dept-header griev-gradient">
+        <div class="dept-icon">📋</div>
+        <div>
+          <div class="dept-title">Public Grievance Portal</div>
+          <div class="dept-sub">Submit complaints, track resolutions</div>
+        </div>
+      </div>
+
+      <div class="grievance-container">
+        <!-- Track Ticket -->
+        <div class="track-card">
+          <h3>Track Existing Complaint</h3>
+          <div class="input-row">
+            <input
+              class="form-input"
+              type="text"
+              placeholder="Enter Ticket ID (e.g. GRV-00234)"
+              id="track-ticket-input"
+              aria-label="Ticket ID"
+            />
+            <button class="btn-primary" onclick="trackTicket()">Track →</button>
+          </div>
+          <div class="ticket-result hidden" id="ticket-result">
+            <div class="ticket-info">
+              <div class="ticket-id">GRV-00234</div>
+              <div class="ticket-status open">🟡 In Progress</div>
+            </div>
+            <div class="ticket-detail">
+              Dept: Water &nbsp;|&nbsp; Type: Low Pressure &nbsp;|&nbsp;
+              Submitted: 20 Feb 2026
+            </div>
+            <div class="ticket-progress-bar">
+              <div class="ticket-bar-fill" style="width: 60%">60%</div>
+            </div>
+            <div class="ticket-note">Expected resolution: 28 Feb 2026</div>
+          </div>
+        </div>
+
+        <!-- Submit New -->
+        <div class="grievance-form">
+          <h3>Submit New Complaint</h3>
+          <div class="form-group">
+            <label class="form-label">Department</label>
+            <select class="form-input" id="griev-dept" aria-label="Department">
+              <option>Electricity</option>
+              <option>Gas</option>
+              <option>Water</option>
+              <option>Municipal / Roads</option>
+              <option>Waste Management</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Complaint Category</label>
+            <select class="form-input" id="griev-cat" aria-label="Category">
+              <option>Billing Dispute</option>
+              <option>No Service / Outage</option>
+              <option>Infrastructure Damage</option>
+              <option>Staff Complaint</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Describe Your Issue</label>
+            <textarea
+              class="form-input form-textarea"
+              rows="3"
+              placeholder="Describe the issue in detail..."
+              id="griev-desc"
+              aria-label="Description"
+            ></textarea>
+          </div>
+          <button class="btn-primary btn-full" onclick="submitGrievance()">
+            Submit Complaint →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     SCREEN 10: TRAFFIC CHALLANS
+═══════════════════════════════════════════ -->
+    <div id="screen-traffic" class="screen">
+      <div class="sub-header">
+        <button class="btn-back" onclick="goToScreen('screen-services')">
+          ← Back
+        </button>
+        <div class="breadcrumb">Home › Services › Traffic Challans</div>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
+      </div>
+      <div class="dept-header traffic-gradient">
+        <div class="dept-icon">🚦</div>
+        <div>
+          <div class="dept-title">Traffic Challans</div>
+          <div class="dept-sub">View &amp; pay pending fines</div>
+        </div>
+      </div>
+      <div class="challan-list">
+        <div class="challan-card pending-challan">
+          <div class="challan-info">
+            <div class="challan-id">CHN-2026-00781</div>
+            <div class="challan-offense">Speeding — 72 km/h in 50 zone</div>
+            <div class="challan-date">
+              Date: 12 Feb 2026 &nbsp;|&nbsp; Location: Ring Road, Surat
+            </div>
+            <div class="challan-vehicle">Vehicle: GJ-05-XX-1234</div>
+          </div>
+          <div class="challan-right">
+            <div class="challan-amount">₹1,000</div>
+            <button
+              class="btn-primary btn-sm"
+              onclick="showToast('Redirecting to payment...')"
+            >
+              Pay Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="challan-no-more">No other pending challans. ✅</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     SCREEN 11: CERTIFICATES
+═══════════════════════════════════════════ -->
+    <div id="screen-certificates" class="screen">
+      <div class="sub-header">
+        <button class="btn-back" onclick="goToScreen('screen-services')">
+          ← Back
+        </button>
+        <div class="breadcrumb">Home › Services › Certificates</div>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
+      </div>
+      <div class="dept-header cert-gradient">
+        <div class="dept-icon">📜</div>
+        <div>
+          <div class="dept-title">Certificates</div>
+          <div class="dept-sub">
+            Apply, download and verify civic certificates
+          </div>
+        </div>
+      </div>
+      <div class="service-grid small" style="padding: 1.5rem">
+        <button
+          class="service-card"
+          onclick="showToast('Redirecting to Birth Certificate application...')"
+        >
+          <div class="service-icon cert">👶</div>
+          <div class="service-name">Birth Certificate</div>
+          <div class="service-desc">Apply or download</div>
+        </button>
+        <button
+          class="service-card"
+          onclick="showToast('Redirecting to Death Certificate application...')"
+        >
+          <div class="service-icon cert">🕊</div>
+          <div class="service-name">Death Certificate</div>
+          <div class="service-desc">Apply or download</div>
+        </button>
+        <button
+          class="service-card"
+          onclick="showToast('Domicile certificate form loading...')"
+        >
+          <div class="service-icon cert">🏡</div>
+          <div class="service-name">Domicile</div>
+          <div class="service-desc">Apply or download</div>
+        </button>
+        <button class="service-card" onclick="showToast('NOC form loading...')">
+          <div class="service-icon cert">📁</div>
+          <div class="service-name">NOC</div>
+          <div class="service-desc">No Objection Certificate</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     GLOBAL OVERLAYS & MODALS
+═══════════════════════════════════════════ -->
+
+    <!-- Toast Notification -->
+    <div class="toast hidden" id="toast">
+      <span id="toast-text">Action completed</span>
+    </div>
+
+    <!-- Session Timeout Warning -->
+    <div class="modal-overlay hidden" id="session-warning-modal">
+      <div class="modal-box">
+        <div class="modal-icon">⏰</div>
+        <h3>Session Expiring Soon</h3>
+        <p>
+          Your session will expire in
+          <strong id="warning-seconds">60</strong> seconds due to inactivity.
+        </p>
+        <div class="modal-actions">
+          <button class="btn-primary" onclick="extendSession()" id="btn-extend">
+            Continue Session
+          </button>
+          <button class="btn-ghost" onclick="endSession()">End Session</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="modal-overlay hidden" id="help-modal">
+      <div class="modal-box">
+        <div class="modal-icon">❓</div>
+        <h3>Need Help?</h3>
+        <div class="help-content">
+          <div class="help-item">
+            📞 Helpline: <strong>1800-599-0019</strong> (Toll Free)
+          </div>
+          <div class="help-item">
+            💬 WhatsApp: <strong>+91 98010 23456</strong>
+          </div>
+          <div class="help-item">
+            📧 Email: <strong>help@nagarseva.in</strong>
+          </div>
+          <div class="help-item">
+            🕐 Hours: 24/7 for digital &nbsp;|&nbsp; 9AM–6PM for phone
+          </div>
+        </div>
+        <button class="btn-primary btn-full" onclick="closeHelp()">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- Service Request Submitted Modal -->
+    <div class="modal-overlay hidden" id="sr-modal">
+      <div class="modal-box">
+        <div class="modal-icon">✅</div>
+        <h3 id="sr-modal-title">Request Submitted!</h3>
+        <p>Your ticket ID: <strong id="sr-ticket-id">SR-0000</strong></p>
+        <p>You will receive an SMS confirmation shortly.</p>
+        <button class="btn-primary btn-full" onclick="closeSRModal()">
+          OK
+        </button>
+      </div>
+    </div>
+
+    <!-- Grievance Success Modal -->
+    <div class="modal-overlay hidden" id="griev-modal">
+      <div class="modal-box">
+        <div class="modal-icon">✅</div>
+        <h3>Complaint Submitted!</h3>
+        <p>Ticket ID: <strong id="griev-ticket-id">GRV-00000</strong></p>
+        <p>You will receive an SMS with your ticket ID for tracking.</p>
+        <button class="btn-primary btn-full" onclick="closeGrievModal()">
+          Back to Services
+        </button>
+      </div>
+    </div>
+
+    <!-- Senior Mode Active Indicator -->
+    <div class="senior-badge hidden" id="senior-badge">
+      👴 Senior Mode Active
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
