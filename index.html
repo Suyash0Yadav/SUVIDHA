@@ -3,30 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NagarSeva KIOSK — Unified Smart Civic Services</title>
-    <meta name="description" content="NagarSeva KIOSK: Intelligent multilingual self-service platform for civic utility services — electricity, gas, water, property tax, grievance and municipal services." />
+    <title>SUVIDHA — Smart Unified Civic Services KIOSK</title>
+    <meta
+      name="description"
+      content="SUVIDHA: Smart Unified Civic Services KIOSK — Multilingual self-service platform for electricity, gas, water, property tax, grievance and municipal services."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
     <!-- ═══════════════════════════════════════════
      SCREEN 1: WELCOME / LANGUAGE SELECTOR
     ═══════════════════════════════════════════ -->
     <div id="screen-welcome" class="screen active">
       <div id="offline-banner" class="offline-banner hidden">
         <span class="offline-icon">⚠</span>
-        <span>Offline Mode — Limited services available. Cached data shown.</span>
+        <span
+          >Offline Mode — Limited services available. Cached data shown.</span
+        >
       </div>
 
       <header class="kiosk-header">
         <div class="header-logo">
           <div class="logo-emblem">🏛</div>
           <div class="logo-text">
-            <span class="logo-main">NagarSeva</span>
-            <span class="logo-sub">KIOSK</span>
+            <span class="logo-main">SUVIDHA</span>
+            <span class="logo-sub">Civic Services KIOSK</span>
           </div>
         </div>
         <div class="header-meta">
@@ -41,41 +48,155 @@
       <main class="welcome-main">
         <div class="welcome-hero">
           <h1 class="welcome-title">स्वागत है &nbsp;|&nbsp; Welcome</h1>
-          <p class="welcome-subtitle">Choose your preferred language to continue &nbsp;/&nbsp; जारी रखने के लिए अपनी भाषा चुनें</p>
+          <p class="welcome-subtitle">
+            Choose your preferred language to continue &nbsp;/&nbsp; जारी रखने
+            के लिए अपनी भाषा चुनें
+          </p>
         </div>
 
         <div class="language-grid" id="language-grid">
-          <button class="lang-btn active" id="lang-en" onclick="setLanguage('en','English')" aria-label="English"><span class="lang-native">English</span><span class="lang-roman">English</span></button>
-          <button class="lang-btn" id="lang-hi" onclick="setLanguage('hi','हिंदी')" aria-label="Hindi"><span class="lang-native">हिंदी</span><span class="lang-roman">Hindi</span></button>
-          <button class="lang-btn" id="lang-gu" onclick="setLanguage('gu','ગુજરાતી')" aria-label="Gujarati"><span class="lang-native">ગુજરાતી</span><span class="lang-roman">Gujarati</span></button>
-          <button class="lang-btn" id="lang-mr" onclick="setLanguage('mr','मराठी')" aria-label="Marathi"><span class="lang-native">मराठी</span><span class="lang-roman">Marathi</span></button>
-          <button class="lang-btn" id="lang-ta" onclick="setLanguage('ta','தமிழ்')" aria-label="Tamil"><span class="lang-native">தமிழ்</span><span class="lang-roman">Tamil</span></button>
-          <button class="lang-btn" id="lang-te" onclick="setLanguage('te','తెలుగు')" aria-label="Telugu"><span class="lang-native">తెలుగు</span><span class="lang-roman">Telugu</span></button>
-          <button class="lang-btn" id="lang-kn" onclick="setLanguage('kn','ಕನ್ನಡ')" aria-label="Kannada"><span class="lang-native">ಕನ್ನಡ</span><span class="lang-roman">Kannada</span></button>
-          <button class="lang-btn" id="lang-ml" onclick="setLanguage('ml','മലയാളം')" aria-label="Malayalam"><span class="lang-native">മലയാളം</span><span class="lang-roman">Malayalam</span></button>
-          <button class="lang-btn" id="lang-bn" onclick="setLanguage('bn','বাংলা')" aria-label="Bengali"><span class="lang-native">বাংলা</span><span class="lang-roman">Bengali</span></button>
-          <button class="lang-btn" id="lang-pa" onclick="setLanguage('pa','ਪੰਜਾਬੀ')" aria-label="Punjabi"><span class="lang-native">ਪੰਜਾਬੀ</span><span class="lang-roman">Punjabi</span></button>
-          <button class="lang-btn" id="lang-or" onclick="setLanguage('or','ଓଡ଼ିଆ')" aria-label="Odia"><span class="lang-native">ଓଡ଼ିଆ</span><span class="lang-roman">Odia</span></button>
-          <button class="lang-btn" id="lang-as" onclick="setLanguage('as','অসমীয়া')" aria-label="Assamese"><span class="lang-native">অসমীয়া</span><span class="lang-roman">Assamese</span></button>
+          <button
+            class="lang-btn active"
+            id="lang-en"
+            onclick="setLanguage('en', 'English')"
+            aria-label="English"
+          >
+            <span class="lang-native">English</span
+            ><span class="lang-roman">English</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-hi"
+            onclick="setLanguage('hi', 'हिंदी')"
+            aria-label="Hindi"
+          >
+            <span class="lang-native">हिंदी</span
+            ><span class="lang-roman">Hindi</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-gu"
+            onclick="setLanguage('gu', 'ગુજરાતી')"
+            aria-label="Gujarati"
+          >
+            <span class="lang-native">ગુજરાતી</span
+            ><span class="lang-roman">Gujarati</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-mr"
+            onclick="setLanguage('mr', 'मराठी')"
+            aria-label="Marathi"
+          >
+            <span class="lang-native">मराठी</span
+            ><span class="lang-roman">Marathi</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-ta"
+            onclick="setLanguage('ta', 'தமிழ்')"
+            aria-label="Tamil"
+          >
+            <span class="lang-native">தமிழ்</span
+            ><span class="lang-roman">Tamil</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-te"
+            onclick="setLanguage('te', 'తెలుగు')"
+            aria-label="Telugu"
+          >
+            <span class="lang-native">తెలుగు</span
+            ><span class="lang-roman">Telugu</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-kn"
+            onclick="setLanguage('kn', 'ಕನ್ನಡ')"
+            aria-label="Kannada"
+          >
+            <span class="lang-native">ಕನ್ನಡ</span
+            ><span class="lang-roman">Kannada</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-ml"
+            onclick="setLanguage('ml', 'മലയാളം')"
+            aria-label="Malayalam"
+          >
+            <span class="lang-native">മലയാളം</span
+            ><span class="lang-roman">Malayalam</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-bn"
+            onclick="setLanguage('bn', 'বাংলা')"
+            aria-label="Bengali"
+          >
+            <span class="lang-native">বাংলা</span
+            ><span class="lang-roman">Bengali</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-pa"
+            onclick="setLanguage('pa', 'ਪੰਜਾਬੀ')"
+            aria-label="Punjabi"
+          >
+            <span class="lang-native">ਪੰਜਾਬੀ</span
+            ><span class="lang-roman">Punjabi</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-or"
+            onclick="setLanguage('or', 'ଓଡ଼ିଆ')"
+            aria-label="Odia"
+          >
+            <span class="lang-native">ଓଡ଼ିଆ</span
+            ><span class="lang-roman">Odia</span>
+          </button>
+          <button
+            class="lang-btn"
+            id="lang-as"
+            onclick="setLanguage('as', 'অসমীয়া')"
+            aria-label="Assamese"
+          >
+            <span class="lang-native">অসমীয়া</span
+            ><span class="lang-roman">Assamese</span>
+          </button>
         </div>
 
-        <button class="btn-primary btn-xl" id="btn-proceed" onclick="goToScreen('screen-auth')">
+        <button
+          class="btn-primary btn-xl"
+          id="btn-proceed"
+          onclick="goToScreen('screen-auth')"
+        >
           <span id="proceed-label">Proceed →</span>
         </button>
 
         <div class="accessibility-bar">
-          <button class="acc-btn" onclick="toggleSeniorMode()" id="senior-toggle" aria-label="Senior Mode">👴 Senior Mode</button>
-          <button class="acc-btn" onclick="showHelp()" aria-label="Help">❓ Help</button>
+          <button
+            class="acc-btn"
+            onclick="toggleSeniorMode()"
+            id="senior-toggle"
+            aria-label="Senior Mode"
+          >
+            👴 Senior Mode
+          </button>
+          <button class="acc-btn" onclick="showHelp()" aria-label="Help">
+            ❓ Help
+          </button>
         </div>
       </main>
 
       <div class="marquee-bar">
         <div class="marquee-track">
-          📢 Gas cylinder booking now available on this kiosk &nbsp;&nbsp;|&nbsp;&nbsp;
-          ⚡ Electricity bill payment — Instant receipt via SMS &nbsp;&nbsp;|&nbsp;&nbsp;
-          🏛 Property tax deadline: March 31, 2026 — Pay now to avoid penalty &nbsp;&nbsp;|&nbsp;&nbsp;
-          💧 Water connection applications: Processing time reduced to 7 days &nbsp;&nbsp;|&nbsp;&nbsp;
-          📱 Accepting UPI, Card &amp; Net Banking payments &nbsp;&nbsp;&nbsp;&nbsp;
+          📢 Gas cylinder booking now available on this kiosk
+          &nbsp;&nbsp;|&nbsp;&nbsp; ⚡ Electricity bill payment — Instant
+          receipt via SMS &nbsp;&nbsp;|&nbsp;&nbsp; 🏛 Property tax deadline:
+          March 31, 2026 — Pay now to avoid penalty &nbsp;&nbsp;|&nbsp;&nbsp; 💧
+          Water connection applications: Processing time reduced to 7 days
+          &nbsp;&nbsp;|&nbsp;&nbsp; 📱 Accepting UPI, Card &amp; Net Banking
+          payments &nbsp;&nbsp;&nbsp;&nbsp;
         </div>
       </div>
     </div>
@@ -85,9 +206,13 @@
     ═══════════════════════════════════════════ -->
     <div id="screen-auth" class="screen">
       <div class="sub-header">
-        <button class="btn-back" onclick="goToScreen('screen-welcome')">← Back</button>
+        <button class="btn-back" onclick="goToScreen('screen-welcome')">
+          ← Back
+        </button>
         <div class="breadcrumb">Home › Login</div>
-        <button class="btn-home" onclick="goToScreen('screen-welcome')">🏠 Home</button>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
       </div>
 
       <div class="auth-container">
@@ -95,53 +220,141 @@
         <div class="auth-card" id="auth-step-1">
           <div class="auth-icon">🔐</div>
           <h2 class="auth-title">Verify Your Identity</h2>
-          <p class="auth-subtitle">Enter your Consumer ID and registered mobile number</p>
+          <p class="auth-subtitle">
+            Enter your Consumer ID and registered mobile number
+          </p>
 
           <div class="form-group">
-            <label class="form-label" for="consumer-id">Consumer ID / Aadhaar Number</label>
-            <input class="form-input" type="text" id="consumer-id" placeholder="e.g. ELEC-2024-00123" maxlength="20" aria-label="Consumer ID" autocomplete="off" />
+            <label class="form-label" for="consumer-id"
+              >Consumer ID / Aadhaar Number</label
+            >
+            <input
+              class="form-input"
+              type="text"
+              id="consumer-id"
+              placeholder="e.g. ELEC-2024-00123"
+              maxlength="20"
+              aria-label="Consumer ID"
+              autocomplete="off"
+            />
           </div>
-          <div class="auth-hint">Demo IDs: <strong>ELEC-2024-00123</strong> &nbsp;|&nbsp; <strong>ELEC-2023-00456</strong> &nbsp;|&nbsp; <strong>GAS-2024-00789</strong></div>
+          <div class="auth-hint">
+            Demo IDs: <strong>ELEC-2024-00123</strong> &nbsp;|&nbsp;
+            <strong>ELEC-2023-00456</strong> &nbsp;|&nbsp;
+            <strong>GAS-2024-00789</strong>
+          </div>
 
           <div class="form-group">
-            <label class="form-label" for="mobile-number">Registered Mobile Number</label>
+            <label class="form-label" for="mobile-number"
+              >Registered Mobile Number</label
+            >
             <div class="input-prefix-wrap">
               <span class="input-prefix">+91</span>
-              <input class="form-input prefix-input" type="tel" id="mobile-number" placeholder="98765 43210" maxlength="10" aria-label="Mobile Number" autocomplete="off" />
+              <input
+                class="form-input prefix-input"
+                type="tel"
+                id="mobile-number"
+                placeholder="98765 43210"
+                maxlength="10"
+                aria-label="Mobile Number"
+                autocomplete="off"
+              />
             </div>
           </div>
 
           <div class="auth-notice">
             <span>🔒</span>
-            <span>An OTP will be sent to your registered mobile. Max 3 attempts allowed.</span>
+            <span
+              >An OTP will be sent to your registered mobile. Max 3 attempts
+              allowed.</span
+            >
           </div>
 
-          <button class="btn-primary btn-full" onclick="sendOTP()">Send OTP via SMS →</button>
+          <button class="btn-primary btn-full" onclick="sendOTP()">
+            Send OTP via SMS →
+          </button>
         </div>
 
         <!-- Step 2: OTP -->
         <div class="auth-card hidden" id="auth-step-2">
           <div class="auth-icon">📱</div>
           <h2 class="auth-title">Enter OTP</h2>
-          <p class="auth-subtitle">OTP sent to +91 <span id="otp-mobile-display">XXXXXXXXXX</span></p>
+          <p class="auth-subtitle">
+            OTP sent to +91 <span id="otp-mobile-display">XXXXXXXXXX</span>
+          </p>
 
           <div class="otp-grid">
-            <input class="otp-input" type="text" maxlength="1" id="otp-0" oninput="otpInput(this,0)" aria-label="OTP digit 1" />
-            <input class="otp-input" type="text" maxlength="1" id="otp-1" oninput="otpInput(this,1)" aria-label="OTP digit 2" />
-            <input class="otp-input" type="text" maxlength="1" id="otp-2" oninput="otpInput(this,2)" aria-label="OTP digit 3" />
-            <input class="otp-input" type="text" maxlength="1" id="otp-3" oninput="otpInput(this,3)" aria-label="OTP digit 4" />
-            <input class="otp-input" type="text" maxlength="1" id="otp-4" oninput="otpInput(this,4)" aria-label="OTP digit 5" />
-            <input class="otp-input" type="text" maxlength="1" id="otp-5" oninput="otpInput(this,5)" aria-label="OTP digit 6" />
+            <input
+              class="otp-input"
+              type="text"
+              maxlength="1"
+              id="otp-0"
+              oninput="otpInput(this, 0)"
+              aria-label="OTP digit 1"
+            />
+            <input
+              class="otp-input"
+              type="text"
+              maxlength="1"
+              id="otp-1"
+              oninput="otpInput(this, 1)"
+              aria-label="OTP digit 2"
+            />
+            <input
+              class="otp-input"
+              type="text"
+              maxlength="1"
+              id="otp-2"
+              oninput="otpInput(this, 2)"
+              aria-label="OTP digit 3"
+            />
+            <input
+              class="otp-input"
+              type="text"
+              maxlength="1"
+              id="otp-3"
+              oninput="otpInput(this, 3)"
+              aria-label="OTP digit 4"
+            />
+            <input
+              class="otp-input"
+              type="text"
+              maxlength="1"
+              id="otp-4"
+              oninput="otpInput(this, 4)"
+              aria-label="OTP digit 5"
+            />
+            <input
+              class="otp-input"
+              type="text"
+              maxlength="1"
+              id="otp-5"
+              oninput="otpInput(this, 5)"
+              aria-label="OTP digit 6"
+            />
           </div>
 
           <div class="otp-attempts">
             <span id="otp-attempts-text">3 attempts remaining</span>
-            <button class="btn-link" onclick="resendOTP()" id="resend-btn" style="display:none">Resend OTP</button>
+            <button
+              class="btn-link"
+              onclick="resendOTP()"
+              id="resend-btn"
+              style="display: none"
+            >
+              Resend OTP
+            </button>
           </div>
-          <div class="otp-timer" id="otp-timer">Resend in: <strong id="otp-countdown">60</strong>s</div>
+          <div class="otp-timer" id="otp-timer">
+            Resend in: <strong id="otp-countdown">60</strong>s
+          </div>
 
-          <button class="btn-primary btn-full" onclick="verifyOTP()">Verify OTP →</button>
-          <button class="btn-ghost btn-full" onclick="backToStep1()">← Change Number</button>
+          <button class="btn-primary btn-full" onclick="verifyOTP()">
+            Verify OTP →
+          </button>
+          <button class="btn-ghost btn-full" onclick="backToStep1()">
+            ← Change Number
+          </button>
         </div>
       </div>
     </div>
@@ -151,16 +364,24 @@
     ═══════════════════════════════════════════ -->
     <div id="screen-services" class="screen">
       <div class="sub-header">
-        <button class="btn-back" onclick="goToScreen('screen-welcome')">← Back</button>
+        <button class="btn-back" onclick="goToScreen('screen-welcome')">
+          ← Back
+        </button>
         <div class="breadcrumb">Home › Services</div>
-        <button class="btn-home" onclick="goToScreen('screen-welcome')">🏠 Home</button>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
       </div>
 
       <div class="user-greeting">
         <div class="user-avatar" id="user-avatar-display">RK</div>
         <div class="user-info">
-          <div class="user-name" id="user-name-display">Welcome, Ramesh Kumar</div>
-          <div class="user-id" id="user-id-display">Consumer ID: ELEC-2024-00123 | Authenticated ✅</div>
+          <div class="user-name" id="user-name-display">
+            Welcome, Ramesh Kumar
+          </div>
+          <div class="user-id" id="user-id-display">
+            Consumer ID: ELEC-2024-00123 | Authenticated ✅
+          </div>
         </div>
         <div class="session-timer-wrap">
           <div class="session-label">Session expires in</div>
@@ -169,51 +390,89 @@
       </div>
 
       <div class="services-section">
-        <h2 class="section-title">Select a Service</h2>
+        <h2 class="section-title">🏙 Select a Service</h2>
         <div class="service-grid" id="service-grid">
-
-          <button class="service-card" onclick="goToScreen('screen-electricity')" id="card-electricity" aria-label="Electricity">
+          <button
+            class="service-card"
+            onclick="goToScreen('screen-electricity')"
+            id="card-electricity"
+            aria-label="Electricity"
+          >
             <div class="service-icon elec">⚡</div>
             <div class="service-name">Electricity</div>
-            <div class="service-desc">Pay bill, report outage, new connection</div>
+            <div class="service-desc">
+              Pay bill, report outage, new connection
+            </div>
             <div class="service-badge pending">₹1,240 Due</div>
           </button>
 
-          <button class="service-card" onclick="goToScreen('screen-gas')" id="card-gas" aria-label="Gas">
+          <button
+            class="service-card"
+            onclick="goToScreen('screen-gas')"
+            id="card-gas"
+            aria-label="Gas"
+          >
             <div class="service-icon gas">🔥</div>
             <div class="service-name">Gas</div>
-            <div class="service-desc">PNG/LPG bill, cylinder booking, safety</div>
+            <div class="service-desc">
+              PNG/LPG bill, cylinder booking, safety
+            </div>
             <div class="service-badge ok">Paid ✓</div>
           </button>
 
-          <button class="service-card" onclick="goToScreen('screen-water')" id="card-water" aria-label="Water">
+          <button
+            class="service-card"
+            onclick="goToScreen('screen-water')"
+            id="card-water"
+            aria-label="Water"
+          >
             <div class="service-icon water">💧</div>
             <div class="service-name">Water</div>
-            <div class="service-desc">Bill payment, connection, leakage report</div>
+            <div class="service-desc">
+              Bill payment, connection, leakage report
+            </div>
             <div class="service-badge overdue">₹638 Overdue</div>
           </button>
 
-          <button class="service-card" onclick="goToScreen('screen-property')" id="card-property" aria-label="Property Tax">
+          <button
+            class="service-card"
+            onclick="goToScreen('screen-property')"
+            id="card-property"
+            aria-label="Property Tax"
+          >
             <div class="service-icon prop">🏠</div>
             <div class="service-name">Property Tax</div>
             <div class="service-desc">View, pay, download certificate</div>
             <div class="service-badge pending">₹8,400 Due</div>
           </button>
 
-          <button class="service-card" onclick="goToScreen('screen-grievance')" id="card-grievance" aria-label="Grievance Portal">
+          <button
+            class="service-card"
+            onclick="goToScreen('screen-grievance')"
+            id="card-grievance"
+            aria-label="Grievance Portal"
+          >
             <div class="service-icon griev">📋</div>
             <div class="service-name">Grievance</div>
-            <div class="service-desc">Submit complaint, track ticket status</div>
+            <div class="service-desc">
+              Submit complaint, track ticket status
+            </div>
             <div class="service-badge neutral">Track Ticket</div>
           </button>
 
-          <button class="service-card" onclick="showTransactionHistory()" id="card-history" aria-label="Transaction History">
+          <button
+            class="service-card"
+            onclick="showTransactionHistory()"
+            id="card-history"
+            aria-label="Transaction History"
+          >
             <div class="service-icon hist">📄</div>
             <div class="service-name">History</div>
-            <div class="service-desc">View all past payments &amp; receipts</div>
+            <div class="service-desc">
+              View all past payments &amp; receipts
+            </div>
             <div class="service-badge neutral">4 Records</div>
           </button>
-
         </div>
       </div>
     </div>
@@ -223,16 +482,22 @@
     ═══════════════════════════════════════════ -->
     <div id="screen-electricity" class="screen">
       <div class="sub-header">
-        <button class="btn-back" onclick="goToScreen('screen-services')">← Back</button>
+        <button class="btn-back" onclick="goToScreen('screen-services')">
+          ← Back
+        </button>
         <div class="breadcrumb">Home › Services › Electricity</div>
-        <button class="btn-home" onclick="goToScreen('screen-welcome')">🏠 Home</button>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
       </div>
 
       <div class="dept-header elec-gradient">
         <div class="dept-icon">⚡</div>
         <div>
           <div class="dept-title">Electricity Department</div>
-          <div class="dept-sub" id="elec-meter">Consumer: ELEC-2024-00123 | Meter: M-78234</div>
+          <div class="dept-sub" id="elec-meter">
+            Consumer: ELEC-2024-00123 | Meter: M-78234
+          </div>
         </div>
       </div>
 
@@ -240,13 +505,17 @@
         <div class="bill-info">
           <div class="bill-label" id="elec-period">Current Bill — Feb 2026</div>
           <div class="bill-amount" id="elec-amount">₹1,240.00</div>
-          <div class="bill-due">Due Date: <strong id="elec-due">March 10, 2026</strong></div>
+          <div class="bill-due">
+            Due Date: <strong id="elec-due">March 10, 2026</strong>
+          </div>
           <div class="bill-status overdue-text">⚠ Payment Pending</div>
         </div>
         <div class="bill-units">
           <div class="units-value" id="elec-units">342</div>
           <div class="units-label">Units (kWh)</div>
-          <div class="units-compare" id="elec-unit-diff">↑ 18 units vs last month</div>
+          <div class="units-compare" id="elec-unit-diff">
+            ↑ 18 units vs last month
+          </div>
         </div>
       </div>
 
@@ -254,30 +523,92 @@
       <div class="chart-section">
         <h3 class="chart-title">6-Month Consumption (kWh)</h3>
         <div class="bar-chart">
-          <div class="bar-group"><div class="bar" id="bar-0" style="height:65%"><span class="bar-val" id="bar-val-0">295</span></div><div class="bar-label" id="bar-lbl-0">Sep</div></div>
-          <div class="bar-group"><div class="bar" id="bar-1" style="height:75%"><span class="bar-val" id="bar-val-1">318</span></div><div class="bar-label" id="bar-lbl-1">Oct</div></div>
-          <div class="bar-group"><div class="bar" id="bar-2" style="height:58%"><span class="bar-val" id="bar-val-2">277</span></div><div class="bar-label" id="bar-lbl-2">Nov</div></div>
-          <div class="bar-group"><div class="bar" id="bar-3" style="height:78%"><span class="bar-val" id="bar-val-3">337</span></div><div class="bar-label" id="bar-lbl-3">Dec</div></div>
-          <div class="bar-group"><div class="bar" id="bar-4" style="height:74%"><span class="bar-val" id="bar-val-4">324</span></div><div class="bar-label" id="bar-lbl-4">Jan</div></div>
-          <div class="bar-group"><div class="bar accent" id="bar-5" style="height:82%"><span class="bar-val" id="bar-val-5">342</span></div><div class="bar-label" id="bar-lbl-5">Feb</div></div>
+          <div class="bar-group">
+            <div class="bar" id="bar-0" style="height: 65%">
+              <span class="bar-val" id="bar-val-0">295</span>
+            </div>
+            <div class="bar-label" id="bar-lbl-0">Sep</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" id="bar-1" style="height: 75%">
+              <span class="bar-val" id="bar-val-1">318</span>
+            </div>
+            <div class="bar-label" id="bar-lbl-1">Oct</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" id="bar-2" style="height: 58%">
+              <span class="bar-val" id="bar-val-2">277</span>
+            </div>
+            <div class="bar-label" id="bar-lbl-2">Nov</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" id="bar-3" style="height: 78%">
+              <span class="bar-val" id="bar-val-3">337</span>
+            </div>
+            <div class="bar-label" id="bar-lbl-3">Dec</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar" id="bar-4" style="height: 74%">
+              <span class="bar-val" id="bar-val-4">324</span>
+            </div>
+            <div class="bar-label" id="bar-lbl-4">Jan</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar accent" id="bar-5" style="height: 82%">
+              <span class="bar-val" id="bar-val-5">342</span>
+            </div>
+            <div class="bar-label" id="bar-lbl-5">Feb</div>
+          </div>
         </div>
-        <div class="tariff-note" id="elec-tariff-info">₹3.62/unit (0–200) + ₹4.89/unit (above 200)</div>
+        <div class="tariff-note" id="elec-tariff-info">
+          ₹3.62/unit (0–200) + ₹4.89/unit (above 200)
+        </div>
       </div>
 
       <!-- Bill History Table -->
       <div class="history-section">
         <h3 class="chart-title">Bill History</h3>
         <table class="history-table">
-          <thead><tr><th>Period</th><th>Units</th><th>Amount</th><th>Status</th></tr></thead>
+          <thead>
+            <tr>
+              <th>Period</th>
+              <th>Units</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
           <tbody id="elec-history-body"></tbody>
         </table>
       </div>
 
       <div class="action-buttons">
-        <button class="btn-primary btn-action" onclick="initiatePayment('Electricity','1240','Feb 2026')" id="pay-electricity-btn">💳 Pay Bill ₹1,240</button>
-        <button class="btn-secondary btn-action" onclick="showServiceRequest('New Connection')" id="new-conn-btn">➕ New Connection</button>
-        <button class="btn-secondary btn-action" onclick="showServiceRequest('Outage Report')" id="report-outage-btn">🔴 Report Outage</button>
-        <button class="btn-secondary btn-action" onclick="showTransactionHistory()">📄 All Receipts</button>
+        <button
+          class="btn-primary btn-action"
+          onclick="initiatePayment('Electricity', '1240', 'Feb 2026')"
+          id="pay-electricity-btn"
+        >
+          💳 Pay Bill ₹1,240
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showServiceRequest('New Connection')"
+          id="new-conn-btn"
+        >
+          ➕ New Connection
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showServiceRequest('Outage Report')"
+          id="report-outage-btn"
+        >
+          🔴 Report Outage
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showTransactionHistory()"
+        >
+          📄 All Receipts
+        </button>
       </div>
     </div>
 
@@ -286,9 +617,15 @@
     ═══════════════════════════════════════════ -->
     <div id="screen-payment" class="screen">
       <div class="sub-header">
-        <button class="btn-back" onclick="goToScreen('screen-electricity')">← Back</button>
-        <div class="breadcrumb" id="pay-breadcrumb">Home › Electricity › Payment</div>
-        <button class="btn-home" onclick="goToScreen('screen-welcome')">🏠 Home</button>
+        <button class="btn-back" onclick="goToScreen('screen-electricity')">
+          ← Back
+        </button>
+        <div class="breadcrumb" id="pay-breadcrumb">
+          Home › Electricity › Payment
+        </div>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
       </div>
 
       <div class="payment-progress">
@@ -308,17 +645,29 @@
 
         <h2 class="section-title center">Choose Payment Method</h2>
         <div class="payment-methods">
-          <button class="payment-method-card active" onclick="selectPayment('upi')" id="pay-upi">
+          <button
+            class="payment-method-card active"
+            onclick="selectPayment('upi')"
+            id="pay-upi"
+          >
             <div class="pm-icon">📱</div>
             <div class="pm-name">UPI</div>
             <div class="pm-desc">Scan QR with any UPI app</div>
           </button>
-          <button class="payment-method-card" onclick="selectPayment('card')" id="pay-card">
+          <button
+            class="payment-method-card"
+            onclick="selectPayment('card')"
+            id="pay-card"
+          >
             <div class="pm-icon">💳</div>
             <div class="pm-name">Debit / Credit Card</div>
             <div class="pm-desc">Visa, Mastercard, RuPay</div>
           </button>
-          <button class="payment-method-card" onclick="selectPayment('netbanking')" id="pay-netbanking">
+          <button
+            class="payment-method-card"
+            onclick="selectPayment('netbanking')"
+            id="pay-netbanking"
+          >
             <div class="pm-icon">🏦</div>
             <div class="pm-name">Net Banking</div>
             <div class="pm-desc">All major banks supported</div>
@@ -332,10 +681,16 @@
               <div class="qr-mock">
                 <div class="qr-pattern">
                   <div class="qr-row">▉▉▉ &nbsp; ▉ &nbsp; ▉▉▉</div>
-                  <div class="qr-row">▉ &nbsp; ▉ &nbsp;▉ &nbsp;&nbsp;▉ &nbsp; ▉ &nbsp; ▉</div>
+                  <div class="qr-row">
+                    ▉ &nbsp; ▉ &nbsp;▉ &nbsp;&nbsp;▉ &nbsp; ▉ &nbsp; ▉
+                  </div>
                   <div class="qr-row">&nbsp;▉▉ &nbsp; ▉▉▉ &nbsp; ▉▉</div>
-                  <div class="qr-row">▉ &nbsp; ▉ &nbsp; ▉ &nbsp; ▉ &nbsp; ▉</div>
-                  <div class="qr-row">&nbsp;&nbsp;▉▉ &nbsp; ▉ &nbsp; ▉▉&nbsp;</div>
+                  <div class="qr-row">
+                    ▉ &nbsp; ▉ &nbsp; ▉ &nbsp; ▉ &nbsp; ▉
+                  </div>
+                  <div class="qr-row">
+                    &nbsp;&nbsp;▉▉ &nbsp; ▉ &nbsp; ▉▉&nbsp;
+                  </div>
                   <div class="qr-row">▉▉▉ &nbsp; ▉ &nbsp; ▉▉▉</div>
                 </div>
               </div>
@@ -343,7 +698,9 @@
             <div class="upi-info">
               <div class="upi-id">nagarseva@upi</div>
               <div class="upi-amount" id="upi-amount-display">₹1,240.00</div>
-              <div class="upi-expire">QR valid for: <strong id="qr-timer">04:59</strong></div>
+              <div class="upi-expire">
+                QR valid for: <strong id="qr-timer">04:59</strong>
+              </div>
               <div class="upi-apps">
                 <span class="upi-app-tag">GPay</span>
                 <span class="upi-app-tag">PhonePe</span>
@@ -355,37 +712,107 @@
         </div>
 
         <!-- Card Section -->
-        <div class="card-section" id="card-section" style="display:none">
+        <div class="card-section" id="card-section" style="display: none">
           <div class="card-form-mock">
-            <div class="form-group"><label class="form-label">Card Number</label><input class="form-input" type="text" placeholder="•••• •••• •••• ••••" maxlength="19" /></div>
-            <div class="form-row2">
-              <div class="form-group"><label class="form-label">Expiry (MM/YY)</label><input class="form-input" type="text" placeholder="MM / YY" maxlength="5" /></div>
-              <div class="form-group"><label class="form-label">CVV</label><input class="form-input" type="password" placeholder="•••" maxlength="3" /></div>
+            <div class="form-group">
+              <label class="form-label">Card Number</label
+              ><input
+                class="form-input"
+                type="text"
+                placeholder="•••• •••• •••• ••••"
+                maxlength="19"
+              />
             </div>
-            <div class="form-group"><label class="form-label">Name on Card</label><input class="form-input" type="text" placeholder="Ramesh Kumar" /></div>
+            <div class="form-row2">
+              <div class="form-group">
+                <label class="form-label">Expiry (MM/YY)</label
+                ><input
+                  class="form-input"
+                  type="text"
+                  placeholder="MM / YY"
+                  maxlength="5"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">CVV</label
+                ><input
+                  class="form-input"
+                  type="password"
+                  placeholder="•••"
+                  maxlength="3"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Name on Card</label
+              ><input
+                class="form-input"
+                type="text"
+                placeholder="Ramesh Kumar"
+              />
+            </div>
             <div class="card-logos">
-              <span class="card-tag">VISA</span><span class="card-tag">MC</span><span class="card-tag">RuPay</span>
+              <span class="card-tag">VISA</span><span class="card-tag">MC</span
+              ><span class="card-tag">RuPay</span>
             </div>
           </div>
         </div>
 
         <!-- Net Banking Section -->
-        <div class="nb-section" id="nb-section" style="display:none">
+        <div class="nb-section" id="nb-section" style="display: none">
           <div class="nb-grid">
-            <button class="nb-bank" onclick="showToast('SBI Net Banking portal loading...')">🏦 SBI</button>
-            <button class="nb-bank" onclick="showToast('HDFC Net Banking portal loading...')">🔵 HDFC</button>
-            <button class="nb-bank" onclick="showToast('ICICI Net Banking portal loading...')">🟠 ICICI</button>
-            <button class="nb-bank" onclick="showToast('Axis Net Banking portal loading...')">🔷 Axis</button>
-            <button class="nb-bank" onclick="showToast('Bank of Baroda portal loading...')">🟣 BoB</button>
-            <button class="nb-bank" onclick="showToast('PNB Net Banking portal loading...')">🔴 PNB</button>
+            <button
+              class="nb-bank"
+              onclick="showToast('SBI Net Banking portal loading...')"
+            >
+              🏦 SBI
+            </button>
+            <button
+              class="nb-bank"
+              onclick="showToast('HDFC Net Banking portal loading...')"
+            >
+              🔵 HDFC
+            </button>
+            <button
+              class="nb-bank"
+              onclick="showToast('ICICI Net Banking portal loading...')"
+            >
+              🟠 ICICI
+            </button>
+            <button
+              class="nb-bank"
+              onclick="showToast('Axis Net Banking portal loading...')"
+            >
+              🔷 Axis
+            </button>
+            <button
+              class="nb-bank"
+              onclick="showToast('Bank of Baroda portal loading...')"
+            >
+              🟣 BoB
+            </button>
+            <button
+              class="nb-bank"
+              onclick="showToast('PNB Net Banking portal loading...')"
+            >
+              🔴 PNB
+            </button>
           </div>
         </div>
 
-        <div class="payment-secure-note">🔒 256-bit SSL Encrypted | PCI-DSS Compliant | No card data stored</div>
+        <div class="payment-secure-note">
+          🔒 256-bit SSL Encrypted | PCI-DSS Compliant | No card data stored
+        </div>
         <div class="pay-summary-bar2">
           Amount: <strong id="pay-summary-amount">₹1,240.00</strong>
         </div>
-        <button class="btn-primary btn-full" onclick="proceedPayment()" id="btn-confirm-payment">Confirm Payment →</button>
+        <button
+          class="btn-primary btn-full"
+          onclick="proceedPayment()"
+          id="btn-confirm-payment"
+        >
+          Confirm Payment →
+        </button>
       </div>
 
       <!-- Step 2: Processing -->
@@ -408,18 +835,43 @@
           <div class="success-icon">✅</div>
           <h2 class="success-title">Payment Successful!</h2>
           <div class="receipt-card">
-            <div class="receipt-row"><span>Transaction ID</span><strong id="receipt-txn-id">TXN202602251234</strong></div>
-            <div class="receipt-row"><span>Amount Paid</span><strong id="receipt-amount">₹1,240.00</strong></div>
-            <div class="receipt-row"><span>Service</span><strong id="receipt-service">Electricity — Feb 2026</strong></div>
-            <div class="receipt-row"><span>Consumer ID</span><strong id="receipt-consumer">ELEC-2024-00123</strong></div>
-            <div class="receipt-row"><span>Date &amp; Time</span><strong id="receipt-datetime">25 Feb 2026, 17:11</strong></div>
-            <div class="receipt-row"><span>Payment Mode</span><strong id="receipt-mode">UPI</strong></div>
-            <div class="receipt-row success-row"><span>Status</span><strong>✅ SUCCESS</strong></div>
+            <div class="receipt-row">
+              <span>Transaction ID</span
+              ><strong id="receipt-txn-id">TXN202602251234</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Amount Paid</span
+              ><strong id="receipt-amount">₹1,240.00</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Service</span
+              ><strong id="receipt-service">Electricity — Feb 2026</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Consumer ID</span
+              ><strong id="receipt-consumer">ELEC-2024-00123</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Date &amp; Time</span
+              ><strong id="receipt-datetime">25 Feb 2026, 17:11</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Payment Mode</span><strong id="receipt-mode">UPI</strong>
+            </div>
+            <div class="receipt-row success-row">
+              <span>Status</span><strong>✅ SUCCESS</strong>
+            </div>
           </div>
-          <div class="receipt-note">📱 SMS receipt sent to registered mobile</div>
+          <div class="receipt-note">
+            📱 SMS receipt sent to registered mobile
+          </div>
           <div class="receipt-actions">
-            <button class="btn-primary" onclick="printReceipt()">🖨 Print Receipt</button>
-            <button class="btn-ghost" onclick="goToScreen('screen-services')">← Back to Services</button>
+            <button class="btn-primary" onclick="printReceipt()">
+              🖨 Print Receipt
+            </button>
+            <button class="btn-ghost" onclick="goToScreen('screen-services')">
+              ← Back to Services
+            </button>
           </div>
         </div>
       </div>
@@ -430,9 +882,13 @@
     ═══════════════════════════════════════════ -->
     <div id="screen-gas" class="screen">
       <div class="sub-header">
-        <button class="btn-back" onclick="goToScreen('screen-services')">← Back</button>
+        <button class="btn-back" onclick="goToScreen('screen-services')">
+          ← Back
+        </button>
         <div class="breadcrumb">Home › Services › Gas</div>
-        <button class="btn-home" onclick="goToScreen('screen-welcome')">🏠 Home</button>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
       </div>
       <div class="dept-header gas-gradient">
         <div class="dept-icon">🔥</div>
@@ -445,30 +901,70 @@
       <div class="bill-summary-card">
         <div class="bill-info">
           <div class="bill-label" id="gas-period">Last Bill — Jan 2026</div>
-          <div class="bill-amount" style="color:var(--success)" id="gas-amount">₹948.00 PAID</div>
-          <div class="bill-due">Paid On: <strong id="gas-paid-on">Jan 18, 2026</strong></div>
-          <div class="bill-status" style="color:var(--success)">✅ All Clear — Next due: <span id="gas-next-due">Feb 28, 2026</span></div>
+          <div
+            class="bill-amount"
+            style="color: var(--success)"
+            id="gas-amount"
+          >
+            ₹948.00 PAID
+          </div>
+          <div class="bill-due">
+            Paid On: <strong id="gas-paid-on">Jan 18, 2026</strong>
+          </div>
+          <div class="bill-status" style="color: var(--success)">
+            ✅ All Clear — Next due: <span id="gas-next-due">Feb 28, 2026</span>
+          </div>
         </div>
         <div class="bill-units">
           <div class="units-value" id="gas-scm">34</div>
           <div class="units-label">SCM Used</div>
-          <div class="units-compare" id="gas-scm-diff">↓ 3 SCM vs last month</div>
+          <div class="units-compare" id="gas-scm-diff">
+            ↓ 3 SCM vs last month
+          </div>
         </div>
       </div>
 
       <!-- Cylinder Status Card -->
       <div class="status-card">
         <div class="status-card-title">🟠 Cylinder Status</div>
-        <div class="status-row"><span>Last Booking</span><strong id="gas-cyl-last">Jan 5, 2026</strong></div>
-        <div class="status-row"><span>Delivery Status</span><strong id="gas-cyl-status" style="color:var(--success)">Delivered ✅</strong></div>
-        <div class="status-row"><span>Next Booking Allowed</span><strong id="gas-cyl-next-allowed">Feb 5, 2026</strong></div>
+        <div class="status-row">
+          <span>Last Booking</span
+          ><strong id="gas-cyl-last">Jan 5, 2026</strong>
+        </div>
+        <div class="status-row">
+          <span>Delivery Status</span
+          ><strong id="gas-cyl-status" style="color: var(--success)"
+            >Delivered ✅</strong
+          >
+        </div>
+        <div class="status-row">
+          <span>Next Booking Allowed</span
+          ><strong id="gas-cyl-next-allowed">Feb 5, 2026</strong>
+        </div>
       </div>
 
       <div class="action-buttons">
-        <button class="btn-secondary btn-action" onclick="bookCylinder()">🛒 Book Cylinder</button>
-        <button class="btn-danger btn-action" onclick="showToast('🚨 Emergency team alerted! Helpline: 1906')">🚨 Gas Leakage Alert</button>
-        <button class="btn-secondary btn-action" onclick="showServiceRequest('Safety Inspection')">📅 Safety Inspection</button>
-        <button class="btn-secondary btn-action" onclick="showToast('Monthly trend report loading...')">📈 Monthly Trends</button>
+        <button class="btn-secondary btn-action" onclick="bookCylinder()">
+          🛒 Book Cylinder
+        </button>
+        <button
+          class="btn-danger btn-action"
+          onclick="showToast('🚨 Emergency team alerted! Helpline: 1906')"
+        >
+          🚨 Gas Leakage Alert
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showServiceRequest('Safety Inspection')"
+        >
+          📅 Safety Inspection
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showToast('Monthly trend report loading...')"
+        >
+          📈 Monthly Trends
+        </button>
       </div>
     </div>
 
@@ -477,9 +973,13 @@
     ═══════════════════════════════════════════ -->
     <div id="screen-water" class="screen">
       <div class="sub-header">
-        <button class="btn-back" onclick="goToScreen('screen-services')">← Back</button>
+        <button class="btn-back" onclick="goToScreen('screen-services')">
+          ← Back
+        </button>
         <div class="breadcrumb">Home › Services › Water</div>
-        <button class="btn-home" onclick="goToScreen('screen-welcome')">🏠 Home</button>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
       </div>
       <div class="dept-header water-gradient">
         <div class="dept-icon">💧</div>
@@ -491,23 +991,55 @@
 
       <div class="bill-summary-card overdue-card">
         <div class="bill-info">
-          <div class="bill-label" id="water-period">Current Bill — Feb 2026</div>
-          <div class="bill-amount" style="color:var(--danger)" id="water-amount">₹580.00 OVERDUE</div>
-          <div class="bill-due">Due Date: <strong id="water-due">Feb 15, 2026 (Past)</strong></div>
-          <div class="bill-status overdue-text" id="water-penalty">⛔ Penalty Applied: ₹58</div>
+          <div class="bill-label" id="water-period">
+            Current Bill — Feb 2026
+          </div>
+          <div
+            class="bill-amount"
+            style="color: var(--danger)"
+            id="water-amount"
+          >
+            ₹580.00 OVERDUE
+          </div>
+          <div class="bill-due">
+            Due Date: <strong id="water-due">Feb 15, 2026 (Past)</strong>
+          </div>
+          <div class="bill-status overdue-text" id="water-penalty">
+            ⛔ Penalty Applied: ₹58
+          </div>
         </div>
         <div class="bill-units">
           <div class="units-value" id="water-kl">18.4</div>
           <div class="units-label">Kiloliters</div>
-          <div class="units-compare" id="water-kl-diff">↑ 2.1 KL vs last month</div>
+          <div class="units-compare" id="water-kl-diff">
+            ↑ 2.1 KL vs last month
+          </div>
         </div>
       </div>
 
       <div class="action-buttons">
-        <button class="btn-primary btn-action" onclick="initiatePayment('Water','638','Feb 2026')" id="pay-water-btn">💳 Pay ₹638 (incl. penalty)</button>
-        <button class="btn-secondary btn-action" onclick="showServiceRequest('Water Leakage Report')">🚰 Report Leakage</button>
-        <button class="btn-secondary btn-action" onclick="showServiceRequest('Tanker Water Booking')">🚛 Book Tanker Water</button>
-        <button class="btn-secondary btn-action" onclick="showWaterQuality()">🧪 Water Quality Report</button>
+        <button
+          class="btn-primary btn-action"
+          onclick="initiatePayment('Water', '638', 'Feb 2026')"
+          id="pay-water-btn"
+        >
+          💳 Pay ₹638 (incl. penalty)
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showServiceRequest('Water Leakage Report')"
+        >
+          🚰 Report Leakage
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showServiceRequest('Tanker Water Booking')"
+        >
+          🚛 Book Tanker Water
+        </button>
+        <button class="btn-secondary btn-action" onclick="showWaterQuality()">
+          🧪 Water Quality Report
+        </button>
       </div>
     </div>
 
@@ -516,9 +1048,13 @@
     ═══════════════════════════════════════════ -->
     <div id="screen-property" class="screen">
       <div class="sub-header">
-        <button class="btn-back" onclick="goToScreen('screen-services')">← Back</button>
+        <button class="btn-back" onclick="goToScreen('screen-services')">
+          ← Back
+        </button>
         <div class="breadcrumb">Home › Services › Property Tax</div>
-        <button class="btn-home" onclick="goToScreen('screen-welcome')">🏠 Home</button>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
       </div>
       <div class="dept-header prop-gradient">
         <div class="dept-icon">🏠</div>
@@ -532,8 +1068,16 @@
         <div class="bill-info">
           <div class="bill-label" id="prop-fy">FY 2025–26 Property Tax</div>
           <div class="bill-amount" id="prop-amount">₹8,400.00</div>
-          <div class="bill-due">Deadline: <strong id="prop-deadline">March 31, 2026</strong></div>
-          <div class="bill-status" style="color:var(--warning)" id="prop-penalty-warn">⚠ Pay before March 31 to avoid 2% penalty (₹168)</div>
+          <div class="bill-due">
+            Deadline: <strong id="prop-deadline">March 31, 2026</strong>
+          </div>
+          <div
+            class="bill-status"
+            style="color: var(--warning)"
+            id="prop-penalty-warn"
+          >
+            ⚠ Pay before March 31 to avoid 2% penalty (₹168)
+          </div>
         </div>
         <div class="bill-units">
           <div class="units-value" id="prop-area">145</div>
@@ -546,16 +1090,44 @@
       <div class="history-section">
         <h3 class="chart-title">Payment History</h3>
         <table class="history-table">
-          <thead><tr><th>Financial Year</th><th>Amount</th><th>Status</th><th>Paid On</th></tr></thead>
+          <thead>
+            <tr>
+              <th>Financial Year</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Paid On</th>
+            </tr>
+          </thead>
           <tbody id="prop-history-body"></tbody>
         </table>
       </div>
 
       <div class="action-buttons">
-        <button class="btn-primary btn-action" onclick="initiatePayment('Property Tax','8400','FY 2025-26')" id="pay-property-btn">💳 Pay ₹8,400</button>
-        <button class="btn-secondary btn-action" onclick="showToast('Receipt downloaded to print queue!')">📥 Download Receipt</button>
-        <button class="btn-secondary btn-action" onclick="showServiceRequest('Property Tax Revision')">📋 Apply for Revision</button>
-        <button class="btn-secondary btn-action" onclick="showToast('No exemptions applicable for this property.')">✅ Check Exemptions</button>
+        <button
+          class="btn-primary btn-action"
+          onclick="initiatePayment('Property Tax', '8400', 'FY 2025-26')"
+          id="pay-property-btn"
+        >
+          💳 Pay ₹8,400
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showToast('Receipt downloaded to print queue!')"
+        >
+          📥 Download Receipt
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showServiceRequest('Property Tax Revision')"
+        >
+          📋 Apply for Revision
+        </button>
+        <button
+          class="btn-secondary btn-action"
+          onclick="showToast('No exemptions applicable for this property.')"
+        >
+          ✅ Check Exemptions
+        </button>
       </div>
     </div>
 
@@ -564,9 +1136,13 @@
     ═══════════════════════════════════════════ -->
     <div id="screen-grievance" class="screen">
       <div class="sub-header">
-        <button class="btn-back" onclick="goToScreen('screen-services')">← Back</button>
+        <button class="btn-back" onclick="goToScreen('screen-services')">
+          ← Back
+        </button>
         <div class="breadcrumb">Home › Services › Grievance</div>
-        <button class="btn-home" onclick="goToScreen('screen-welcome')">🏠 Home</button>
+        <button class="btn-home" onclick="goToScreen('screen-welcome')">
+          🏠 Home
+        </button>
       </div>
       <div class="dept-header griev-gradient">
         <div class="dept-icon">📋</div>
@@ -580,24 +1156,50 @@
         <!-- Track Ticket -->
         <div class="track-card">
           <h3>Track Existing Complaint</h3>
-          <div class="track-hint">Try: <strong>GRV-00234</strong> (In Progress) &nbsp;|&nbsp; <strong>GRV-00198</strong> (Resolved) &nbsp;|&nbsp; <strong>GRV-00315</strong> (Open)</div>
+          <div class="track-hint">
+            Try: <strong>GRV-00234</strong> (In Progress) &nbsp;|&nbsp;
+            <strong>GRV-00198</strong> (Resolved) &nbsp;|&nbsp;
+            <strong>GRV-00315</strong> (Open)
+          </div>
           <div class="input-row">
-            <input class="form-input" type="text" placeholder="Enter Ticket ID (e.g. GRV-00234)" id="track-ticket-input" aria-label="Ticket ID" />
+            <input
+              class="form-input"
+              type="text"
+              placeholder="Enter Ticket ID (e.g. GRV-00234)"
+              id="track-ticket-input"
+              aria-label="Ticket ID"
+            />
             <button class="btn-primary" onclick="trackTicket()">Track →</button>
           </div>
 
           <div class="ticket-result hidden" id="ticket-result">
             <div class="ticket-info">
               <div class="ticket-id" id="ticket-id-display">GRV-00234</div>
-              <div class="ticket-status in_progress" id="ticket-status-display">🟡 In Progress</div>
+              <div class="ticket-status in_progress" id="ticket-status-display">
+                🟡 In Progress
+              </div>
             </div>
-            <div class="ticket-detail" id="ticket-dept-display">Water | Low Water Pressure</div>
-            <div class="ticket-detail" id="ticket-date-display">Submitted: 20 Feb 2026</div>
-            <div class="ticket-detail" id="ticket-assigned-display">Assigned: Field Team — Zone B</div>
+            <div class="ticket-detail" id="ticket-dept-display">
+              Water | Low Water Pressure
+            </div>
+            <div class="ticket-detail" id="ticket-date-display">
+              Submitted: 20 Feb 2026
+            </div>
+            <div class="ticket-detail" id="ticket-assigned-display">
+              Assigned: Field Team — Zone B
+            </div>
             <div class="ticket-progress-bar">
-              <div class="ticket-bar-fill" id="ticket-bar-fill" style="width:60%">60%</div>
+              <div
+                class="ticket-bar-fill"
+                id="ticket-bar-fill"
+                style="width: 60%"
+              >
+                60%
+              </div>
             </div>
-            <div class="ticket-note" id="ticket-eta">Expected resolution: 28 Feb 2026</div>
+            <div class="ticket-note" id="ticket-eta">
+              Expected resolution: 28 Feb 2026
+            </div>
             <!-- Timeline -->
             <div class="timeline" id="ticket-timeline"></div>
           </div>
@@ -628,9 +1230,17 @@
           </div>
           <div class="form-group">
             <label class="form-label">Describe Your Issue</label>
-            <textarea class="form-input form-textarea" rows="3" placeholder="Describe the issue in detail..." id="griev-desc" aria-label="Description"></textarea>
+            <textarea
+              class="form-input form-textarea"
+              rows="3"
+              placeholder="Describe the issue in detail..."
+              id="griev-desc"
+              aria-label="Description"
+            ></textarea>
           </div>
-          <button class="btn-primary btn-full" onclick="submitGrievance()">Submit Complaint →</button>
+          <button class="btn-primary btn-full" onclick="submitGrievance()">
+            Submit Complaint →
+          </button>
         </div>
       </div>
     </div>
@@ -645,107 +1255,210 @@
     </div>
 
     <!-- Session Timeout Warning -->
-    <div class="modal-overlay hidden" id="session-warning-modal" role="dialog" aria-modal="true">
+    <div
+      class="modal-overlay hidden"
+      id="session-warning-modal"
+      role="dialog"
+      aria-modal="true"
+    >
       <div class="modal-box">
         <div class="modal-icon">⏰</div>
         <h3>Session Expiring Soon</h3>
-        <p>Your session will expire in <strong id="warning-seconds">60</strong> seconds due to inactivity.</p>
+        <p>
+          Your session will expire in
+          <strong id="warning-seconds">60</strong> seconds due to inactivity.
+        </p>
         <div class="modal-actions">
-          <button class="btn-primary" onclick="extendSession()" id="btn-extend">Continue Session</button>
+          <button class="btn-primary" onclick="extendSession()" id="btn-extend">
+            Continue Session
+          </button>
           <button class="btn-ghost" onclick="endSession()">End Session</button>
         </div>
       </div>
     </div>
 
     <!-- Help Modal -->
-    <div class="modal-overlay hidden" id="help-modal" role="dialog" aria-modal="true">
+    <div
+      class="modal-overlay hidden"
+      id="help-modal"
+      role="dialog"
+      aria-modal="true"
+    >
       <div class="modal-box">
         <div class="modal-icon">❓</div>
         <h3>Need Help?</h3>
         <div class="help-content">
-          <div class="help-item">📞 Helpline: <strong>1800-599-0019</strong> (Toll Free 24/7)</div>
+          <div class="help-item">
+            📞 Helpline: <strong>1800-599-0019</strong> (Toll Free 24/7)
+          </div>
           <div class="help-item">🚨 Gas Emergency: <strong>1906</strong></div>
-          <div class="help-item">💬 WhatsApp: <strong>+91 98010 23456</strong></div>
-          <div class="help-item">📧 Email: <strong>help@nagarseva.in</strong></div>
-          <div class="help-item">🕐 Support Hours: 24/7 digital | 9AM–6PM phone</div>
+          <div class="help-item">
+            💬 WhatsApp: <strong>+91 98010 23456</strong>
+          </div>
+          <div class="help-item">
+            📧 Email: <strong>help@nagarseva.in</strong>
+          </div>
+          <div class="help-item">
+            🕐 Support Hours: 24/7 digital | 9AM–6PM phone
+          </div>
         </div>
-        <button class="btn-primary btn-full" onclick="closeHelp()">Close</button>
+        <button class="btn-primary btn-full" onclick="closeHelp()">
+          Close
+        </button>
       </div>
     </div>
 
     <!-- Service Request Modal -->
-    <div class="modal-overlay hidden" id="sr-modal" role="dialog" aria-modal="true">
+    <div
+      class="modal-overlay hidden"
+      id="sr-modal"
+      role="dialog"
+      aria-modal="true"
+    >
       <div class="modal-box">
         <div class="modal-icon">✅</div>
         <h3 id="sr-modal-title">Request Submitted!</h3>
         <p>Ticket ID: <strong id="sr-ticket-id">SR-0000</strong></p>
-        <p style="opacity:0.7;font-size:0.9rem">You will receive an SMS confirmation shortly with tracking details.</p>
-        <button class="btn-primary btn-full" onclick="closeSRModal()">OK</button>
+        <p style="opacity: 0.7; font-size: 0.9rem">
+          You will receive an SMS confirmation shortly with tracking details.
+        </p>
+        <button class="btn-primary btn-full" onclick="closeSRModal()">
+          OK
+        </button>
       </div>
     </div>
 
     <!-- Grievance Success Modal -->
-    <div class="modal-overlay hidden" id="griev-modal" role="dialog" aria-modal="true">
+    <div
+      class="modal-overlay hidden"
+      id="griev-modal"
+      role="dialog"
+      aria-modal="true"
+    >
       <div class="modal-box">
         <div class="modal-icon">✅</div>
         <h3>Complaint Submitted!</h3>
         <p>Ticket ID: <strong id="griev-ticket-id">GRV-00000</strong></p>
-        <p class="modal-detail" id="griev-summary">Electricity → Billing Dispute</p>
-        <p style="opacity:0.7;font-size:0.9rem">SMS confirmation sent. Use your Ticket ID to track status anytime.</p>
-        <button class="btn-primary btn-full" onclick="closeGrievModal()">Back to Services</button>
+        <p class="modal-detail" id="griev-summary">
+          Electricity → Billing Dispute
+        </p>
+        <p style="opacity: 0.7; font-size: 0.9rem">
+          SMS confirmation sent. Use your Ticket ID to track status anytime.
+        </p>
+        <button class="btn-primary btn-full" onclick="closeGrievModal()">
+          Back to Services
+        </button>
       </div>
     </div>
 
     <!-- Cylinder Booking Modal -->
-    <div class="modal-overlay hidden" id="cylinder-modal" role="dialog" aria-modal="true">
+    <div
+      class="modal-overlay hidden"
+      id="cylinder-modal"
+      role="dialog"
+      aria-modal="true"
+    >
       <div class="modal-box">
         <div class="modal-icon">🛒</div>
         <h3>Cylinder Booked!</h3>
-        <p>Booking Reference: <strong id="cylinder-ref-id">CYL-00000</strong></p>
+        <p>
+          Booking Reference: <strong id="cylinder-ref-id">CYL-00000</strong>
+        </p>
         <div class="modal-detail-card">
-          <div class="receipt-row"><span>Delivery Date</span><strong id="cylinder-delivery-date">Thursday, 27 February</strong></div>
-          <div class="receipt-row"><span>Delivery Slot</span><strong>10:00 AM – 2:00 PM</strong></div>
-          <div class="receipt-row"><span>Cylinder Type</span><strong>14.2 kg LPG</strong></div>
-          <div class="receipt-row"><span>Payment</span><strong>Cash on Delivery</strong></div>
+          <div class="receipt-row">
+            <span>Delivery Date</span
+            ><strong id="cylinder-delivery-date">Thursday, 27 February</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Delivery Slot</span><strong>10:00 AM – 2:00 PM</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Cylinder Type</span><strong>14.2 kg LPG</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Payment</span><strong>Cash on Delivery</strong>
+          </div>
         </div>
-        <p style="opacity:0.7;font-size:0.9rem">📱 SMS confirmation sent with booking details.</p>
-        <button class="btn-primary btn-full" onclick="closeCylinderModal()">Done</button>
+        <p style="opacity: 0.7; font-size: 0.9rem">
+          📱 SMS confirmation sent with booking details.
+        </p>
+        <button class="btn-primary btn-full" onclick="closeCylinderModal()">
+          Done
+        </button>
       </div>
     </div>
 
     <!-- Water Quality Modal -->
-    <div class="modal-overlay hidden" id="water-quality-modal" role="dialog" aria-modal="true">
+    <div
+      class="modal-overlay hidden"
+      id="water-quality-modal"
+      role="dialog"
+      aria-modal="true"
+    >
       <div class="modal-box">
         <div class="modal-icon">🧪</div>
         <h3>Water Quality Report</h3>
-        <p style="opacity:0.7;font-size:0.9rem">Last tested: <span id="water-quality-date">Feb 20, 2026</span></p>
+        <p style="opacity: 0.7; font-size: 0.9rem">
+          Last tested: <span id="water-quality-date">Feb 20, 2026</span>
+        </p>
         <div class="modal-detail-card">
-          <div class="receipt-row"><span>Turbidity</span><strong id="water-quality-turbidity">0.3 NTU ✅</strong></div>
-          <div class="receipt-row"><span>pH Level</span><strong id="water-quality-ph">7.2 ✅</strong></div>
-          <div class="receipt-row"><span>Free Chlorine</span><strong id="water-quality-chlorine">0.5 mg/L ✅</strong></div>
-          <div class="receipt-row"><span>Overall</span><strong style="color:var(--success)">Safe for Drinking ✅</strong></div>
+          <div class="receipt-row">
+            <span>Turbidity</span
+            ><strong id="water-quality-turbidity">0.3 NTU ✅</strong>
+          </div>
+          <div class="receipt-row">
+            <span>pH Level</span><strong id="water-quality-ph">7.2 ✅</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Free Chlorine</span
+            ><strong id="water-quality-chlorine">0.5 mg/L ✅</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Overall</span
+            ><strong style="color: var(--success)">Safe for Drinking ✅</strong>
+          </div>
         </div>
-        <button class="btn-primary btn-full" onclick="closeWaterQuality()">Close</button>
+        <button class="btn-primary btn-full" onclick="closeWaterQuality()">
+          Close
+        </button>
       </div>
     </div>
 
     <!-- Transaction History Modal -->
-    <div class="modal-overlay hidden" id="txn-modal" role="dialog" aria-modal="true">
+    <div
+      class="modal-overlay hidden"
+      id="txn-modal"
+      role="dialog"
+      aria-modal="true"
+    >
       <div class="modal-box modal-wide">
         <div class="modal-icon">📄</div>
         <h3>Transaction History</h3>
         <div class="txn-table-wrap">
           <table class="history-table">
-            <thead><tr><th>Txn ID</th><th>Service</th><th>Amount</th><th>Mode</th><th>Date</th><th>Status</th></tr></thead>
+            <thead>
+              <tr>
+                <th>Txn ID</th>
+                <th>Service</th>
+                <th>Amount</th>
+                <th>Mode</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
             <tbody id="txn-history-body"></tbody>
           </table>
         </div>
-        <button class="btn-primary btn-full" onclick="closeTransactionModal()">Close</button>
+        <button class="btn-primary btn-full" onclick="closeTransactionModal()">
+          Close
+        </button>
       </div>
     </div>
 
     <!-- Senior Mode Badge -->
-    <div class="senior-badge hidden" id="senior-badge">👴 Senior Mode Active</div>
+    <div class="senior-badge hidden" id="senior-badge">
+      👴 Senior Mode Active
+    </div>
 
     <script src="app.js"></script>
   </body>

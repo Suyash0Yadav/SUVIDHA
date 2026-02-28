@@ -41,6 +41,8 @@ python -m http.server 8080
 ```bash
 npx serve .
 
+npx serve . --listen 3000  # to run on terminal port 3000
+
 # Then open the URL shown in the terminal
 ```
 
